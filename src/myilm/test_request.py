@@ -6,7 +6,7 @@ import urllib.request
 url = "http://localhost:11434/api/chat"
 headers = {"Content-Type": "application/json"}
 request = json.dumps({
-	"model": "gemma4:e4b",
+	"model": "gemma4:e2b",
 	"messages": [
 		{"role": "user", "content": "How are you today?"}
 	],

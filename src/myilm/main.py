@@ -1,9 +1,8 @@
-from llm import LLM
-from response import parse_llm_response
-
+from tinyagent import LLM, TinyAgent
 
 if __name__ == "__main__":
-    my_llm = LLM()
-    llm_answer = my_llm.ask_llm("Hello, how are you?")
-    response = parse_llm_response(llm_answer)
+    llm = LLM()
+    agent = TinyAgent(llm=llm)
+    task = input("Ask a question to LLM: ")
+    response = agent.run(task=task)
     print(response)
